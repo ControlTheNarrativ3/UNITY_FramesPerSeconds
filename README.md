@@ -1,2 +1,2 @@
 # UNITY_FramesPerSeconds
-FPS Control 
+Simple Fps Component for unity 
