@@ -13,11 +13,11 @@ public class FramesPerSeconds : MonoBehaviour
     private TMP_Dropdown dropdown; // The dropdown that will display the FPS
 
     [SerializeField]
-    private GameObject[] FPSObject;
+    private GameObject[] FPSObject;  // The object that will display the FPS
 
     [SerializeField]
-    private TextMeshProUGUI ShowFPSText;
-    private bool showFPS = false;
+    private TextMeshProUGUI ShowFPSText; // The text that will display the FPS status
+    private bool showFPS = false; // The FPS status
 
     [SerializeField]
     private int indexNumber; // The index number of the dropdown
@@ -26,7 +26,7 @@ public class FramesPerSeconds : MonoBehaviour
     float deltaTime = 0.0f; // The time between frames
 
     [SerializeField]
-    private List<int> targetFramesPerSecond = new List<int>() { 0, 30, 60, 120 }; // The target FPS
+    private List<int> targetFramesPerSecond = new List<int>() { 0, 30, 60, 120 }; // The target FPS list
 
     //============================================================================================//
 
@@ -108,7 +108,7 @@ public class FramesPerSeconds : MonoBehaviour
     //============================================================================================//
     void PopulateList()
     {
-        //dropdown.ClearOptions(); //Clear pre-added options from the list, remove this line if you want to keep em.
+        //dropdown.ClearOptions(); //Clear pre-added options from the list, remove this line if you want to keep them.
         List<string> newOptions = new List<string>(); // Create a new list of strings
         for (int i = 0; i < targetFramesPerSecond.Count; i++) // Loop through the target FPS list
         {
